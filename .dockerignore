@@ -1,2 +1,4 @@
 venv
 customer.txt
+.idea
+__pycache__

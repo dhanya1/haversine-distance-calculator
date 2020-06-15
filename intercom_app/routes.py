@@ -45,7 +45,6 @@ def distance():
         # Ensure the uploaded file is safe, using secure_filename to combat
         # threats.
         file_extension = path.splitext(file_received.filename)[1].strip()
-        print(file_extension)
         if file_extension != ".txt":
             return jsonify({'message': 'Only ".txt"'
                                        ' files are accepted'}), 400

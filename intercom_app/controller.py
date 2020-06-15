@@ -48,14 +48,13 @@ def calculate_distance_from_office(cust_lat, cust_lang):
     return dist_in_km
 
 
-def get_customers_in_range(customer_file='customers.txt', range=100):
+def get_customers_in_range(customer_file, range=100):
     """
-    :param customer_file: Full path to a file with customer details, defaults
-     to customers.txt in current location.
-    :param distance_allowed: distance in Km within which the customer should
+    :param customer_file: Full path to a file with customer details
+    :param range: distance in Km within which the customer should
      be located, defaults to 100 km.
-    :return: Prints the names and ID of customers within allowed range to
-     STDOUT sorted by customer ID.
+    :return: returns the names and ID of customers within allowed range
+    sorted by customer ID.
     """
     customers_in_range = []
 
@@ -66,10 +65,7 @@ def get_customers_in_range(customer_file='customers.txt', range=100):
                                     row['latitude'],
                                     row['longitude'])
         if distance_from_office <= range:
+            print(distance_from_office)
             customers_in_range.append((row['user_id'], row['name']))
     return sorted(customers_in_range)
 
-
-if __name__ == "__main__":
-    get_customers_in_range(
-        customer_file="/Users/dhanyajayachandra/PycharmProjects/intercom/customers.txt")

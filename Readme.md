@@ -36,9 +36,10 @@ co-ordinates in the env_file, or run multiple versions of the code by running
    Headers:
    `Content-Type: multipart/form-data`
    
-   Body:
-   `file: Upload the file here`
-   `distance: <distance in kilometers> (optional: Defaults to 100)`
+   Body (formdata):
+   `(keyword: file, type:file) : Upload the file here`
+   `(keyword:distance, type:text): <distance in kilometers> (optional: Defaults
+    to 100)`
    
    Curl command:\
    `curl -v -F distance="100" -F 

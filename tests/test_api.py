@@ -17,7 +17,7 @@ class TestRequestCreateAPIs(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
 
     def create_request(self, data=None):
-        return self.app.post('/distance_calculator/',
+        return self.app.post('/distance-calculator/',
                              data=data,
                              content_type='multipart/form-data')
 

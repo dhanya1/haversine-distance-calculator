@@ -25,6 +25,10 @@
    `file: Upload the file here`
    `distance: <distance in kilometers> (optional: Defaults to 100)`
    
+   Testing the Curl way:\
+   `curl -v -F distance=<distance in km as text> -F file=@localfilename 
+   http:localhost:8000/distance-calculator/`
+   
    
    
    

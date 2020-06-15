@@ -65,7 +65,6 @@ def get_customers_in_range(customer_file, range=100):
                                     row['latitude'],
                                     row['longitude'])
         if distance_from_office <= range:
-            print(distance_from_office)
             customers_in_range.append((row['user_id'], row['name']))
     return sorted(customers_in_range)
 

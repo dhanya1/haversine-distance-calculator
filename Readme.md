@@ -1,3 +1,17 @@
+**Introduction**
+
+The Haversine distance calculation code is wrapped into an API using Flask 
+and containerized with Docker.
+
+**Features**\
+The endpoint allows you to upload a file and optionally specify a range 
+within which the customer must be to get an invite. The range defaults to 100.
+
+You can configure a different branch/office location as the origin by updating 
+co-ordinates in the env_file, or run multiple versions of the code by running
+ containers with different env files.
+
+
 **Prequisite:**
 1. git
 2. Docker
@@ -12,7 +26,7 @@
 5. To test the functionality:\
    `docker run --env-file env.txt -p 8000:8000 haversine:latest`
    
-   Now you can test the API Endpoint:\
+   To test the API Endpoint (Postman or similar):\
    Base URL:
    `http://localhost:8000/`
    
@@ -29,7 +43,7 @@
    Curl command:\
    `curl -v -F distance="100" -F 
    file=@/full_path_to_current_directory/customers.txt 
-   http:localhost:8000/distance-calculator/`
+   http://localhost:8000/distance-calculator/`
    
    
    

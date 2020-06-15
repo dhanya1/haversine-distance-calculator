@@ -5,11 +5,12 @@
 **Instructions:**
 1. git clone <repo name> 
 2. cd <to_folder_with_Dockerfile>
-3. docker build -t <tag_name_of_your_choice> .
+3. `docker build -t haversine .`
 4. To run unittests:\
-   docker run --env-file env.txt <image_name> python -m unittest discover
+   `docker run --env-file env.txt haversine:latest python -m unittest 
+   discover`
 5. To test the functionality:\
-   docker run --env-file env.txt -p 8000:8000 <image-name>
+   `docker run --env-file env.txt -p 8000:8000 haversine:latest`
    
    Now you can test the API Endpoint:\
    Base URL:
